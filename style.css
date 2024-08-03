@@ -109,6 +109,7 @@ header h1 {
 }
 
 .description p {
+  font-family: "Lobster", sans-serif;
   padding-top: 35px;
   font-size: 22px;
   color: #000;
