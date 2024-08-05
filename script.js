@@ -3,11 +3,19 @@ $(function () {
     // Declare variables
     var $mainMenuItems = $('#main-menu ul').children('li'), // Select all 'li' elements that are children of '#main-menu ul'
         totalMainMenuItems = $mainMenuItems.length, // Get the number of main menu items
-        openedIndex = -1, // Variable to keep track of the opened index, initialized to -1 (no item opened)
+        openedIndex = 2, // Variable to keep track of the opened index, initialized to 2 (item at index 2 is initially open)
 
         // Initialize the menu
         init = function () {
+            // Bind click events to menu items
+            bindEvents();
+            // If the openedIndex is valid, animate the item to open it
+            if (validIndex(openedIndex))
+                animateItem($mainMenuItems.eq(openedIndex), true, 700);
+        },
 
+        // Bind click events to menu items
+        bindEvents = function () {
             // Add click event handler to children with class '.img' within main menu items
             $mainMenuItems.children('.img').click(function () {
                 var newIndex = $(this).parent().index(), // Get the index of the clicked item
@@ -33,7 +41,7 @@ $(function () {
 
     // Function to validate if the index is within the range of menu items
     validIndex = function (indexToCheck) {
-        return (indexToCheck >= 0) && (indexToCheck < totalMainMenuItems);
+        return (indexToCheck >= 0) && (indexToCheck < totalMainMenuItems); // Check if the index is within the valid range
     }
 
     // Function to animate menu items
