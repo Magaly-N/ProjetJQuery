@@ -32,15 +32,15 @@ header h1 {
   width: 980px;
   height: 500px;
   margin: 0 auto;
-  padding-top: 130px;
+  padding-top: 148px;
 }
 
 #main-menu ul li {
+  position: relative;
   float: left;
   width: 140px;
   height: 500px;
   overflow: hidden;
-  position: relative;
 }
 
 .bw {
@@ -114,4 +114,39 @@ header h1 {
   font-size: 22px;
   color: #000;
   text-align: center;
+}
+
+/* BUTTONS-MENU*/
+
+#buttons-menu {
+  width: 100%;
+  padding: 170px 0 50px 0;
+}
+
+#buttons-menu ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  width: 150px;
+  margin-left: 30px;
+  padding: 10px 0;
+  text-shadow: 1px 1px 1px #000;
+  font-family: "Lobster", sans-serif;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75);
+  background: #333;
+  border: 2px solid #b70000;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.button:hover {
+  background: #b70000;
+  border: 2px solid #333;
+  font-size: 24px;
 }
